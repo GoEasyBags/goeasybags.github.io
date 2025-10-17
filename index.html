@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GoEasy | It's Easy</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Top Banner -->
@@ -12,27 +12,32 @@
     <p>✨ Free Nationwide Shipping on Orders ₦50,000 and Above!</p>
   </div>
 
-  <!-- Navigation -->
+  <!-- Navbar -->
   <header>
-    <div class="logo">GoEasy</div>
-    <nav id="nav-links">
-      <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="https://wa.me/2348077275962" target="_blank" class="whatsapp">Need Help?</a>
-    </nav>
-    <div class="hamburger" id="hamburger">
-      ☰
+    <div class="container nav-container">
+      <h1 class="logo">GoEasy</h1>
+      <nav id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="https://wa.me/2348077275962" target="_blank" class="help">Need Help?</a>
+      </nav>
+      <div class="hamburger" id="hamburger">☰</div>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-text">
-      <h1>Style Upgrade is Easy ✨</h1>
-      <p>Discover quality branded and unbranded bags — designed for every style and occasion.</p>
-      <a href="shop.html" class="btn">Shop Now</a>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h2>Style Upgrade is Easy ✨</h2>
+        <p>Discover quality branded and unbranded bags — for every lifestyle and occasion.</p>
+        <a href="shop.html" class="btn">Shop Now</a>
+      </div>
+      <div class="hero-image">
+        <img src="images/bag-banner.jpg" alt="GoEasy Bags">
+      </div>
     </div>
   </section>
 
@@ -42,7 +47,6 @@
   </footer>
 
   <script>
-    // Toggle mobile menu
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
     hamburger.addEventListener('click', () => {
