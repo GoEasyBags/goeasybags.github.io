@@ -3,55 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GoEasy | It's Easy</title>
+  <title>GoEasy | It’s Easy — Quality Branded & Unbranded Bags</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Top Banner -->
-  <div class="top-banner">
-    <p>✨ Free Nationwide Shipping on Orders ₦50,000 and Above!</p>
-  </div>
 
   <!-- Navbar -->
   <header>
-    <div class="container nav-container">
-      <h1 class="logo">GoEasy</h1>
-      <nav id="nav-links">
-        <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="https://wa.me/2348077275962" target="_blank" class="help">Need Help?</a>
-      </nav>
-      <div class="hamburger" id="hamburger">☰</div>
+    <nav class="navbar">
+      <div class="logo">GoEasy</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+    <div class="dropdown" id="dropdown">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h2>Style Upgrade is Easy ✨</h2>
-        <p>Discover quality branded and unbranded bags — for every lifestyle and occasion.</p>
-        <a href="shop.html" class="btn">Shop Now</a>
-      </div>
-      <div class="hero-image">
-        <img src="images/bag-banner.jpg" alt="GoEasy Bags">
-      </div>
-    </div>
+    <h1>Style Upgrade is Easy!</h1>
+    <p>Discover quality branded & unbranded bags designed for every occasion.</p>
+    <a href="shop.html" class="shop-btn">Shop Now</a>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 GoEasy Bags | It's Easy 💼</p>
-  </footer>
+  <!-- Banner -->
+  <section class="banner">
+    <p>✨ Free nationwide shipping on orders ₦50,000 and above! ✨</p>
+  </section>
 
   <script>
     const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+    const dropdown = document.getElementById('dropdown');
     hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      dropdown.classList.toggle('show');
     });
   </script>
+
 </body>
 </html>
