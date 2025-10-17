@@ -3,60 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GoEasy Bags – Luxury Meets Simplicity</title>
+  <title>GoEasy | It's Easy</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
-
-  <!-- Shipping Banner -->
-  <div class="shipping-banner">
-    Free Nationwide Shipping on Orders ₦50,000 and Above!
+  <!-- Top Banner -->
+  <div class="top-banner">
+    <p>✨ Free Nationwide Shipping on Orders ₦50,000 and Above!</p>
   </div>
 
-  <!-- Navbar -->
+  <!-- Navigation -->
   <header>
-    <nav class="navbar">
-      <div class="logo">GoEasy</div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-      <div class="hamburger" id="hamburger">
-        ☰
-      </div>
+    <div class="logo">GoEasy</div>
+    <nav id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://wa.me/2348077275962" target="_blank" class="whatsapp">Need Help?</a>
     </nav>
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-text">
-      <h1>Luxury Bags, Effortless Style</h1>
-      <p>Handpicked for the modern woman. Quality, elegance, and confidence in every piece.</p>
+      <h1>Style Upgrade is Easy ✨</h1>
+      <p>Discover quality branded and unbranded bags — designed for every style and occasion.</p>
       <a href="shop.html" class="btn">Shop Now</a>
-    </div>
-    <div class="hero-img">
-      <img src="images/hero-bag.jpg" alt="Luxury Bag">
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>Need assistance? <a href="https://wa.me/2348077275962" target="_blank">Contact us on WhatsApp</a></p>
-    <p>&copy; 2025 GoEasy Bags. All Rights Reserved.</p>
+    <p>© 2025 GoEasy Bags | It's Easy 💼</p>
   </footer>
 
   <script>
-    // Hamburger toggle
+    // Toggle mobile menu
     const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-
+    const navLinks = document.getElementById('nav-links');
     hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
+      navLinks.classList.toggle('active');
     });
   </script>
-
 </body>
 </html>
