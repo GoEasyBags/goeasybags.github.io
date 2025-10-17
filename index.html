@@ -8,22 +8,31 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header>
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- Navigation -->
+<header class="navbar">
+  <div class="logo">GoEasy</div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="hamburger" id="hamburger">&#9776;</div>
+</header>
 
 <!-- Hero Section -->
 <section class="hero">
-  <img src="images/hero-banner2.jpg" alt="GoEasy Bags Banner" class="hero-img">
+  <img src="images/hero-banner.jpg" alt="GoEasy Bags Banner" class="hero-img">
 </section>
+
+<script>
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 
 
   <!-- Product Preview -->
