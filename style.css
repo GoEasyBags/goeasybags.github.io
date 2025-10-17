@@ -177,22 +177,4 @@ footer {
   display: block;
 }
 
-.hero-text {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
 
-.shop-link {
-  color: #0b3c5d; /* deep classy blue */
-  font-size: 1.2rem;
-  text-decoration: underline;
-  font-family: "Playfair Display", serif;
-  transition: color 0.3s ease;
-}
-
-.shop-link:hover {
-  color: #5b8dbd; /* softer blue hover */
-}
