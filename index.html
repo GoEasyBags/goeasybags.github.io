@@ -1,25 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GoEasy Bags</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEasy Bags – Luxury Meets Simplicity</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
+
+  <!-- Shipping Banner -->
+  <div class="shipping-banner">
+    Free Nationwide Shipping on Orders ₦50,000 and Above!
+  </div>
+
+  <!-- Navbar -->
   <header>
-    <h1>GoEasy Bags</h1>
-    <p>It’s Easy 👜</p>
+    <nav class="navbar">
+      <div class="logo">GoEasy</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        ☰
+      </div>
+    </nav>
   </header>
 
-  <section class="intro">
-    <h2>Welcome to GoEasy!</h2>
-    <p>Where style meets comfort. Browse through our collection of beautiful, affordable, and high-end bags that fit *easily* into your style.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Luxury Bags, Effortless Style</h1>
+      <p>Handpicked for the modern woman. Quality, elegance, and confidence in every piece.</p>
+      <a href="shop.html" class="btn">Shop Now</a>
+    </div>
+    <div class="hero-img">
+      <img src="images/hero-bag.jpg" alt="Luxury Bag">
+    </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>Contact us on WhatsApp: <a href="https://wa.me/2348077275962">08077275962</a></p>
-    <p>© 2025 GoEasy Bags</p>
+    <p>Need assistance? <a href="https://wa.me/2348077275962" target="_blank">Contact us on WhatsApp</a></p>
+    <p>&copy; 2025 GoEasy Bags. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    // Hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
 </body>
 </html>
