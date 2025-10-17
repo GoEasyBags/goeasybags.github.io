@@ -10,43 +10,53 @@
 
   <!-- Navbar -->
   <header>
-    <nav class="navbar">
-      <div class="logo">GoEasy</div>
-      <ul class="nav-links">
+    <nav class="nav">
+      <ul>
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="hamburger" id="hamburger">&#9776;</div>
     </nav>
-    <div class="dropdown" id="dropdown">
-      <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Style Upgrade is Easy!</h1>
-    <p>Discover quality branded & unbranded bags designed for every occasion.</p>
-    <a href="shop.html" class="shop-btn">Shop Now</a>
+    <div class="hero-text">
+      <h1>It’s Easy to Be Elegant.</h1>
+      <p>Luxury meets simplicity. Discover timeless bags crafted to elevate your every look.</p>
+      <a href="shop.html" class="cta-btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Product Preview -->
+  <section class="preview">
+    <div class="product">
+      <img src="images/bag1.jpg" alt="Bag 1">
+      <h3>Soft Classic Tote</h3>
+      <p>₦35,000</p>
+    </div>
+    <div class="product">
+      <img src="images/bag2.jpg" alt="Bag 2">
+      <h3>Signature Mini Bag</h3>
+      <p>₦28,000</p>
+    </div>
+    <div class="product">
+      <img src="images/bag3.jpg" alt="Bag 3">
+      <h3>Velvet Shoulder Bag</h3>
+      <p>₦42,000</p>
+    </div>
   </section>
 
   <!-- Banner -->
   <section class="banner">
-    <p>✨ Free nationwide shipping on orders ₦50,000 and above! ✨</p>
+    <p>💙 Free Nationwide Shipping on Orders ₦50,000 & Above 💙</p>
   </section>
 
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const dropdown = document.getElementById('dropdown');
-    hamburger.addEventListener('click', () => {
-      dropdown.classList.toggle('show');
-    });
-  </script>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 GoEasy Bags. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
