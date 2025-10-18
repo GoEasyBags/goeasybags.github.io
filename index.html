@@ -1,70 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GoEasyBags | Home</title>
-<link rel="stylesheet" href="style.css" />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GoEasy — Luxury Bags</title>
+
+  <!-- Playfair Display from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Note re: Brittany font:
+       If you have the Brittany font file, upload it to /fonts and uncomment the @font-face rule in style.css.
+       Otherwise the stylesheet uses a script fallback for that "handwritten" vibe. -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Promo Bar -->
-<div class="promo-bar">Free nationwide shipping on orders ₦50,000 and above</div>
 
+  <!-- TOP PROMO BANNER -->
+  <div class="top-banner">
+    Free Nationwide Shipping on Orders ₦50,000+
+  </div>
 
-<!-- Navbar -->
-<header class="navbar">
-<div class="logo">GoEasyBags</div>
-<nav class="nav-links" id="navLinks">
-<a href="index.html">Home</a>
-<a href="shop.html">Shop</a>
-<a href="#collections">Collections</a>
-<a href="#contact">Contact</a>
-</nav>
-<div class="hamburger" onclick="toggleMenu()">
-<span></span>
-<span></span>
-<span></span>
-</div>
-</header>
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <div class="container nav-row">
+      <div class="nav-left">
+        <!-- no logo image by request — brand name left minimal -->
+        <span class="brand-text">GoEasy</span>
+      </div>
 
+      <nav class="nav-center" id="mainNav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
 
-<!-- Hero Banner -->
-<section class="hero">
-<img src="images/hero-banner2.jpg" alt="GoEasyBags Luxury Banner" class="hero-banner">
-<div class="hero-text">
-<h1>Effortless Luxury. Everyday Elegance.</h1>
-<p>Discover the world of timeless sophistication.</p>
-<a href="shop.html" class="btn-primary">Shop Now</a>
-</div>
-</section>
+      <div class="nav-right">
+        <a class="help-link" href="https://wa.me/2348077275962" target="_blank" rel="noopener">Need help?</a>
+        <button id="hamburger" class="hamburger" aria-label="menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
+  <!-- MOBILE NAV (drawer) -->
+  <div id="mobileNav" class="mobile-nav" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wa.me/2348077275962" target="_blank">Need help?</a>
+  </div>
 
-<!-- Collections -->
-<section class="collections" id="collections">
-<h2>Our Collections</h2>
-<div class="collection-grid">
-<div class="collection-card">
-<img src="images/CB.jpg" alt="Classy Collection">
-<h3>The Classy Edit</h3>
-</div>
-<div class="collection-card">
-<img src="images/CB2.jpg" alt="Elite Collection">
-<h3>The Elite Line</h3>
-</div>
-<div class="collection-card">
-<img src="images/bagco.jpg" alt="Everyday Collection">
-<h3>Everyday Chic</h3>
-</div>
-<div class="collection-card">
-<img src="images/bagco2.jpg" alt="Signature Collection">
-<h3>Signature Luxe</h3>
-</div>
-</div>
-</section>
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <!-- Replace hero-banner.jpg with your Canva banner (1920x1080) -->
+      <img src="images/hero-banner.jpg" alt="GoEasy hero banner" class="hero-image">
+    </section>
 
+    <!-- SHOP OUR COLLECTIONS -->
+    <section class="collections container" id="collections">
+      <h2 class="section-title">Shop Our Collections</h2>
 
-<!-- Footer -->
-<footer class="footer" id="contact">
-<p>Follow us on Instagram <a href="#">@GoEasyBags</a></p>
+      <div class="grid">
+        <!-- Collection card: replace images with real collection images -->
+        <article class="card fade-in">
+          <div class="image-wrap">
+            <img src="images/collection-luxury.jpg" alt="Luxury Bags">
+            <div class="card-overlay">
+              <span class="overlay-text">Explore Luxury Bags →</span>
+            </div>
+          </div>
+          <h3 class="card-title">Luxury Bags</h3>
+        </article>
+
+        <article class="card fade-in">
+          <div class="image-wrap">
+            <img src="images/collection-tote.jpg" alt="Tote Bags">
+            <div class="card-overlay">
+              <span class="overlay-text">Shop Tote Bags →</span>
+            </div>
+          </div>
+          <h3 class="card-title">Tote Bags</h3>
+        </article>
+
+        <article class="card fade-in">
+          <div class="image-wrap">
+            <img src="images/collection-crossbody.jpg" alt="Crossbody Bags">
+            <div class="card-overlay">
+              <span class="overlay-text">See Crossbody →</span>
+            </div>
+          </div>
+          <h3 class="card-title">Crossbody</h3>
+        </article>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM FEED (placeholder grid) -->
+    <section class="insta-section">
+      <div class="container">
+        <h2 class="section-title">From Instagram</h2>
+        <div class="insta-grid">
+          <!-- Replace with real IG images or embed later -->
+          <img src="images/ig1.jpg" alt="IG 1" class="fade-in-small">
+          <img src="images/ig2.jpg" alt="IG 2" class="fade-in-small">
+          <img src="images/ig3.jpg" alt="IG 3" class="fade-in-small">
+          <img src="images/ig4.jpg" alt="IG 4" class="fade-in-small">
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / FOOTER -->
+    <section class="about-footer container">
+      <div class="about-left fade-in">
+        <!-- Replace with your portrait image -->
+        <img src="images/founder.jpg" alt="Founder" class="founder-img">
+      </div>
+      <div class="about-right fade-in">
+        <h3 class="about-title">GoEasy</h3>
+        <p class="about-text">
+          GoEasy curates high-quality branded and unbranded bags for the modern woman who values
+          elegance and simplicity. We combine timeless design with accessible pricing so luxury is effortless.
+        </p>
+        <p class="about-text small">
+          Nationwide pick-up shipping; doorstep available on request. Questions? <a href="https://wa.me/2348077275962" target="_blank">Chat with us</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>© 2025 GoEasy. All rights reserved.</p>
+      <div class="socials">
+        <!-- placeholder social icons (replace with SVGs or images) -->
+        <a href="#" aria-label="instagram">IG</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Small script: hamburger + fade-in on scroll -->
+  <script>
+    // Hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', () => {
+      const open = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!open));
+      mobileNav.classList.toggle('open');
+      document.body.classList.toggle('no-scroll');
+    });
+
+    // Fade-in using IntersectionObserver
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in, .fade-in-small').forEach(el => io.observe(el));
+  </script>
+</body>
 </html>
