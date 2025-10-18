@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GoEasy – Luxury Bags</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GoEasyBags | Home</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- Promo Bar -->
+<div class="promo-bar">Free nationwide shipping on orders ₦50,000 and above</div>
 
-  <!-- Navigation Bar -->
-  <header class="navbar">
-    <div class="logo">GoEasy</div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-banner">
-      <img src="images/hero-banner2.jpg" alt="GoEasy Luxury Bags Banner">
-      <div class="hero-text">
-        <!-- Since you’ve already added text on Canva, no extra text needed -->
-      </div>
-    </div>
-  </section>
+<!-- Navbar -->
+<header class="navbar">
+<div class="logo">GoEasyBags</div>
+<nav class="nav-links" id="navLinks">
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="#collections">Collections</a>
+<a href="#contact">Contact</a>
+</nav>
+<div class="hamburger" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</header>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 GoEasy. All rights reserved.</p>
-  </footer>
 
-  <!-- JavaScript for Hamburger Menu -->
-  <script>
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
+<!-- Hero Banner -->
+<section class="hero">
+<img src="images/hero-banner2.jpg" alt="GoEasyBags Luxury Banner" class="hero-banner">
+<div class="hero-text">
+<h1>Effortless Luxury. Everyday Elegance.</h1>
+<p>Discover the world of timeless sophistication.</p>
+<a href="shop.html" class="btn-primary">Shop Now</a>
+</div>
+</section>
 
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-      hamburger.classList.toggle("open");
-    });
-  </script>
 
-</body>
+<!-- Collections -->
+<section class="collections" id="collections">
+<h2>Our Collections</h2>
+<div class="collection-grid">
+<div class="collection-card">
+<img src="images/CB.jpg" alt="Classy Collection">
+<h3>The Classy Edit</h3>
+</div>
+<div class="collection-card">
+<img src="images/CB2.jpg" alt="Elite Collection">
+<h3>The Elite Line</h3>
+</div>
+<div class="collection-card">
+<img src="images/bagco.jpg" alt="Everyday Collection">
+<h3>Everyday Chic</h3>
+</div>
+<div class="collection-card">
+<img src="images/bagco2.jpg" alt="Signature Collection">
+<h3>Signature Luxe</h3>
+</div>
+</div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer" id="contact">
+<p>Follow us on Instagram <a href="#">@GoEasyBags</a></p>
 </html>
