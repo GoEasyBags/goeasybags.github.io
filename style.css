@@ -1,58 +1,61 @@
-/* ---------- General Reset ---------- */
+/* === RESET === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
+/* === BODY === */
 body {
-  color: #333;
-  background-color: #fff;
+  font-family: 'Playfair Display', serif;
+  color: #0f172a; /* deep navy blue */
+  background-color: #f8fafc; /* soft off-white */
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
-/* ---------- Navbar ---------- */
+/* === NAVBAR === */
 .navbar {
+  width: 100%;
+  padding: 1.2rem 5%;
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.8);
+  z-index: 999;
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px); /* For Safari */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  z-index: 1000;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  -webkit-backdrop-filter: blur(8px); /* Safari fix */
 }
 
 .logo {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #111;
+  letter-spacing: 1px;
+  color: #003366;
 }
 
+/* NAV LINKS */
 .nav-links {
   display: flex;
   gap: 2rem;
-  transition: all 0.3s ease;
 }
 
 .nav-links a {
-  color: #333;
   text-decoration: none;
+  color: #003366;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #c4a484;
+  color: #0077b6;
 }
 
-/* ---------- Hamburger Menu ---------- */
+/* === HAMBURGER MENU === */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -63,113 +66,98 @@ body {
 .hamburger span {
   width: 25px;
   height: 3px;
-  background-color: #333;
+  background: #003366;
   border-radius: 2px;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
+/* ANIMATION */
 .hamburger.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .hamburger.open span:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger.open span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ---------- Banner ---------- */
-.banner {
-  background: url('banner-image.jpg') center center/cover no-repeat;
+/* === HERO SECTION === */
+.hero {
+  width: 100%;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: 70px; /* offset for navbar */
+  overflow: hidden;
+}
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* === FOOTER === */
+.footer {
   text-align: center;
-  color: white;
-  position: relative;
-  margin-top: 70px; /* Offset for navbar */
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #334155;
+  background-color: #f1f5f9;
+  border-top: 1px solid #e2e8f0;
 }
 
-.banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-}
-
-.banner-content {
-  position: relative;
-  z-index: 1;
-  max-width: 90%;
-  padding: 1rem;
-}
-
-.banner-content h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.banner-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* ---------- Responsive ---------- */
-
-/* Tablet View */
+/* === RESPONSIVE STYLES === */
 @media (max-width: 900px) {
   .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 70px;
-    right: 0;
-    width: 60%;
-    background: rgba(255, 255, 255, 0.95);
-    webkit-backdrop-filter: blur(8px);
-    text-align: right;
-    padding: 2rem 1.5rem;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    transition: right 0.4s ease;
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   .nav-links.active {
-    display: flex;
+    right: 0;
   }
 
   .hamburger {
     display: flex;
   }
 
-  .banner-content h1 {
-    font-size: 2.2rem;
+  .hero {
+    height: 70vh;
   }
 
-  .banner-content p {
-    font-size: 1rem;
+  .hero-banner img {
+    object-fit: contain;
   }
 }
 
-/* Mobile View */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
   .nav-links {
-    width: 100%;
-    align-items: flex-end;
+    width: 80%;
   }
 
-  .banner {
-    height: 90vh;
-  }
-
-  .banner-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .banner-content p {
-    font-size: 0.95rem;
+  .hero {
+    height: 60vh;
   }
 }
