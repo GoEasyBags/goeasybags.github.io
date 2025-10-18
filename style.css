@@ -132,8 +132,7 @@ body {
     right: 0;
     width: 60%;
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    webkit-backdrop-filter: blur(8px);
     text-align: right;
     padding: 2rem 1.5rem;
   }
