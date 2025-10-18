@@ -227,3 +227,108 @@ body {
 
 /* small tweaks */
 a { color: inherit; }
+
+/* SHOP PAGE STYLES */
+
+.shop-hero {
+  background: url('images/shop-banner.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.shop-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.shop-hero p {
+  font-family: 'Brittany', cursive;
+  font-size: 1.2rem;
+  color: #dbe8ff;
+}
+
+/* Product Grid */
+.product-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 50px 20px;
+  background: #f9fbff;
+}
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #001b44;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #003366;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  background: #001b44;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-about {
+  max-width: 400px;
+}
+
+.footer-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Responsive Footer */
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
