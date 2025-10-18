@@ -3,56 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop – GoEasy</title>
+  <title>Shop | GoEasy Bags</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <header class="navbar">
-    <div class="logo">GoEasy</div>
-    <nav class="nav-links">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="#">About</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="#">Collections</a>
       <a href="#">Contact</a>
-    </nav>
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
     </div>
-  </header>
+  </nav>
 
-  <!-- Shop Page Content -->
-  <section class="shop">
-    <div class="shop-container">
-      <h1>Our Collection</h1>
-      <p>Explore GoEasy’s curated range of luxury handbags.</p>
+  <!-- HERO SECTION -->
+  <section class="hero shop-hero">
+    <h1>Shop Our Collection</h1>
+    <p>Effortless luxury. Modern femininity. Timeless design.</p>
+  </section>
 
-      <!-- Example products -->
-      <div class="products">
-        <div class="product-card">
-          <img src="bag1.jpg" alt="Bag 1">
-          <h3>Chic Nude Tote</h3>
-          <p>₦45,000</p>
-        </div>
-        <div class="product-card">
-          <img src="bag2.jpg" alt="Bag 2">
-          <h3>Mini Cream Satchel</h3>
-          <p>₦38,000</p>
-        </div>
-      </div>
+  <!-- PRODUCTS SECTION -->
+  <section class="products">
+    <div class="product">
+      <img src="images/bag1.jpg" alt="Classic Tote" />
+      <h3>Classic Tote</h3>
+      <p>₦85,000</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/bag2.jpg" alt="Mini Shoulder Bag" />
+      <h3>Mini Shoulder Bag</h3>
+      <p>₦72,000</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/bag3.jpg" alt="Luxury Handbag" />
+      <h3>Luxury Handbag</h3>
+      <p>₦95,000</p>
+      <button>Add to Cart</button>
     </div>
   </section>
 
-  <script>
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 GoEasy Bags. All rights reserved.</p>
+  </footer>
 
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-      hamburger.classList.toggle("open");
-    });
-  </script>
 </body>
 </html>

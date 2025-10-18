@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GoEasy Bags</title>
+  <title>GoEasy – Luxury Bags</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- Navigation Bar -->
   <header class="navbar">
     <div class="logo">GoEasy</div>
     <nav class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Collection</a>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
       <a href="#">About</a>
       <a href="#">Contact</a>
     </nav>
@@ -23,14 +24,22 @@
     </div>
   </header>
 
-  <!-- Banner Section -->
-  <section class="banner">
-    <div class="banner-content">
-      <h1>Luxury Bags for Every Woman</h1>
-      <p>Effortless elegance, timeless style — GoEasy makes luxury easy.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-banner">
+      <img src="hero-banner2.jpg" alt="GoEasy Luxury Bags Banner">
+      <div class="hero-text">
+        <!-- Since you’ve already added text on Canva, no extra text needed -->
+      </div>
     </div>
   </section>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 GoEasy. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Hamburger Menu -->
   <script>
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelector(".nav-links");
@@ -40,5 +49,6 @@
       hamburger.classList.toggle("open");
     });
   </script>
+
 </body>
 </html>
