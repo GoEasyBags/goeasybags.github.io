@@ -1,228 +1,176 @@
-/* ===========================
-   GoEasy — Homepage (blue luxury)
-   =========================== */
-
-/* Fonts:
-   Playfair Display imported in index.html for headings.
-   If you have Brittany, upload it to /fonts and add an @font-face rule:
-   @font-face {
-     font-family: 'Brittany';
-     src: url('/fonts/Brittany.woff2') format('woff2');
-     font-weight: normal;
-     font-style: normal;
-     font-display: swap;
-   }
-   Then use 'Brittany' in .about-text or small accents.
-*/
-
-/* Reset */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-/* Base */
-:root {
-  --nav-blue: #08264a;    /* deep navy */
-  --accent-blue: #3668a6; /* softer royal blue */
-  --muted-blue: #eaf3ff;  /* pale background tint */
-  --max-width: 1200px;
+/* ---------- General Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color: #0c2036;
-  background: #ffffff;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+  color: #333;
+  background-color: #fff;
+  overflow-x: hidden;
 }
 
-/* ---------- Top banner ---------- */
-.top-banner {
-  background: var(--accent-blue);
-  color: #fff;
-  text-align: center;
-  padding: 8px 12px;
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-/* ---------- Header / Nav ---------- */
-.site-header, .nav-row { box-sizing: border-box; }
-.site-header { position: sticky; top: 0; z-index: 60; background: #fff; border-bottom: 1px solid #f0f3f8; }
-
-.container { width: 90%; max-width: var(--max-width); margin: 0 auto; }
-
-.nav-row {
+/* ---------- Navbar ---------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* For Safari */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 18px 0;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.brand-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.25rem;
-  letter-spacing: 0.3px;
-  color: var(--nav-blue);
-  font-weight: 600;
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111;
 }
 
-.nav-center { display: flex; gap: 28px; align-items: center; }
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  transition: all 0.3s ease;
+}
 
-.nav-link, .nav-center .nav-link, .nav-center a { text-decoration: none; color: var(--nav-blue); font-weight: 500; }
-.nav-center .nav-link.active { color: var(--accent-blue); border-bottom: 2px solid var(--accent-blue); padding-bottom: 6px; }
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
 
-/* right help link */
-.help-link { color: var(--nav-blue); text-decoration: none; margin-right: 12px; font-weight:500; }
+.nav-links a:hover {
+  color: #c4a484;
+}
 
-/* Hamburger button */
+/* ---------- Hamburger Menu ---------- */
 .hamburger {
   display: none;
-  background: none;
-  border: none;
+  flex-direction: column;
   cursor: pointer;
-  width: 34px;
-  height: 28px;
-  padding: 0;
+  gap: 5px;
 }
 
 .hamburger span {
-  display: block;
+  width: 25px;
   height: 3px;
-  background: var(--nav-blue);
-  margin: 5px 0;
+  background-color: #333;
   border-radius: 2px;
-  transition: transform .3s ease, opacity .2s ease;
+  transition: all 0.3s ease;
 }
 
-.mobile-nav { display: none; }
-
-/* ---------- HERO ---------- */
-.hero {
-  width: 100%;
-  background: #fff;
-  overflow: hidden;
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
-.hero-image {
-  width: 100%;
-  height: 72vh;
-  object-fit: cover;
-  display: block;
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
 }
 
-/* If user wants vertical space on mobile */
-@media (max-width: 900px) {
-  .hero-image { height: 52vh; object-fit: contain; }
-}
-@media (max-width: 480px) {
-  .hero-image { height: 48vh; object-fit: contain; }
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ---------- Collections ---------- */
-.collections { padding: 60px 0; background: #fff; }
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.1rem;
+/* ---------- Banner ---------- */
+.banner {
+  background: url('banner-image.jpg') center center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  color: var(--nav-blue);
-  margin-bottom: 28px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 18px;
-}
-
-.card {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
+  color: white;
   position: relative;
-  cursor: pointer;
-  transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .25s ease;
-  box-shadow: 0 6px 18px rgba(16,38,72,0.04);
+  margin-top: 70px; /* Offset for navbar */
 }
-.card:hover { transform: translateY(-8px); box-shadow: 0 16px 40px rgba(16,38,72,0.08); }
 
-.image-wrap { position: relative; overflow: hidden; height: 320px; }
-.image-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
-.card:hover .image-wrap img { transform: scale(1.06); }
-
-/* overlay on hover */
-.card-overlay {
+.banner::before {
+  content: "";
   position: absolute;
   inset: 0;
-  display:flex;
-  align-items: center;
-  justify-content:center;
-  opacity: 0;
-  background: linear-gradient(180deg, rgba(8,38,74,0.32), rgba(8,38,74,0.45));
-  color: #fff;
-  transition: opacity .28s ease;
-}
-.card:hover .card-overlay { opacity: 1; }
-.overlay-text { font-weight:600; font-family: 'Playfair Display', serif; }
-
-/* card title */
-.card-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.05rem;
-  color: var(--nav-blue);
-  padding: 14px 16px 20px;
-  text-align:center;
+  background: rgba(0, 0, 0, 0.4);
 }
 
-/* make grid responsive */
-@media (max-width: 1000px) {
-  .grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
-}
-@media (max-width: 600px) {
-  .grid { grid-template-columns: 1fr; padding: 0 12px; }
+.banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 90%;
+  padding: 1rem;
 }
 
-/* ---------- Instagram feed ---------- */
-.insta-section { background: var(--muted-blue); padding: 42px 0; }
-.insta-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; max-width: var(--max-width); margin: 18px auto 0; padding: 0 18px; }
-.insta-grid img { width:100%; height: 120px; object-fit: cover; border-radius:6px; box-shadow:0 6px 18px rgba(6,22,45,0.04); }
-@media (max-width:900px){ .insta-grid { grid-template-columns: repeat(2,1fr); } }
-@media (max-width:480px){ .insta-grid { grid-template-columns: repeat(2,1fr); } }
+.banner-content h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
 
-/* ---------- About / footer split ---------- */
-.about-footer {
-  display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 30px;
-  align-items: center;
-  padding: 56px 0;
-  max-width: var(--max-width);
+.banner-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
   margin: 0 auto;
-  padding-left: 18px; padding-right: 18px;
 }
 
-.founder-img { width:100%; border-radius:8px; display:block; box-shadow:0 10px 30px rgba(8,38,74,0.06); }
-.about-title { font-family: 'Playfair Display', serif; font-size:1.6rem; color:var(--nav-blue); margin-bottom:10px; }
-.about-text { color:#243a57; line-height:1.6; font-size:0.99rem; }
+/* ---------- Responsive ---------- */
 
-/* Footer bottom */
-.site-footer { border-top:1px solid #f0f3f8; padding: 18px 0; background:#fff; }
-.footer-row { display:flex; justify-content:space-between; gap:10px; align-items:center; }
-.footer-row p{ color:#6b7a93; font-size:0.95rem; }
+/* Tablet View */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 60%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    text-align: right;
+    padding: 2rem 1.5rem;
+  }
 
-/* ---------- Fade-in helpers ---------- */
-.fade-in { opacity:0; transform: translateY(10px); transition: opacity .6s ease, transform .6s ease; }
-.fade-in.visible { opacity:1; transform: translateY(0); }
-.fade-in-small { opacity:0; transform: translateY(6px); transition: opacity .45s ease, transform .45s ease; }
-.fade-in-small.visible { opacity:1; transform: translateY(0); }
+  .nav-links.active {
+    display: flex;
+  }
 
-/* ---------- Mobile nav behavior ---------- */
-.mobile-nav.open { display:block; position:fixed; inset:0; background: rgba(0,0,0,0.4); z-index:9999; }
-/* but we used .mobile-nav as #mobileNav element controlled in JS; stylesheet applies .open class on it when toggled */
-#mobileNav.open { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; background:#fff; padding: 40px 20px; }
+  .hamburger {
+    display: flex;
+  }
 
-/* small tweaks */
-a { color: inherit; }
+  .banner-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+  .nav-links {
+    width: 100%;
+    align-items: flex-end;
+  }
+
+  .banner {
+    height: 90vh;
+  }
+
+  .banner-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner-content p {
+    font-size: 0.95rem;
+  }
+}

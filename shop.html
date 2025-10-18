@@ -1,65 +1,58 @@
 <!DOCTYPE html>
-<a href="index.html">Home</a>
-<a href="shop.html">Shop</a>
-<a href="#collections">Collections</a>
-<a href="#contact">Contact</a>
-</nav>
-<div class="hamburger" onclick="toggleMenu()">
-<span></span>
-<span></span>
-<span></span>
-</div>
-</header>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop – GoEasy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">GoEasy</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
 
+  <!-- Shop Page Content -->
+  <section class="shop">
+    <div class="shop-container">
+      <h1>Our Collection</h1>
+      <p>Explore GoEasy’s curated range of luxury handbags.</p>
 
-<section class="shop">
-<h2>Shop Our Bags</h2>
-<div class="shop-grid">
-<div class="product-card">
-<img src="images/bag1.jpg" alt="Bag 1">
-<h3>Elite Blue Tote</h3>
-<p class="price">₦35,000 <span class="old-price">₦40,000</span></p>
-<button class="btn-primary">Add to Cart</button>
-</div>
+      <!-- Example products -->
+      <div class="products">
+        <div class="product-card">
+          <img src="bag1.jpg" alt="Bag 1">
+          <h3>Chic Nude Tote</h3>
+          <p>₦45,000</p>
+        </div>
+        <div class="product-card">
+          <img src="bag2.jpg" alt="Bag 2">
+          <h3>Mini Cream Satchel</h3>
+          <p>₦38,000</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
 
-<div class="product-card">
-<img src="images/bag2.jpg" alt="Bag 2">
-<h3>Classy Pearl Satchel</h3>
-<p class="price">₦28,500</p>
-<p class="stock-warning">Only 5 left!</p>
-<button class="btn-primary">Add to Cart</button>
-</div>
-
-
-<div class="product-card">
-<img src="images/bag3.jpg" alt="Bag 3">
-<h3>Everyday Luxe Bag</h3>
-<p class="price">₦22,000</p>
-<button class="btn-primary">Add to Cart</button>
-</div>
-
-
-<div class="product-card sold-out">
-<img src="images/bag4.jpg" alt="Bag 4">
-<h3>Signature Velvet Mini</h3>
-<p class="price">₦30,000</p>
-<p class="sold-out-text">Sold Out</p>
-</div>
-</div>
-</section>
-
-
-<footer class="footer">
-<p>Follow us on Instagram <a href="#">@GoEasyBags</a></p>
-<p>© 2025 GoEasyBags. All Rights Reserved.</p>
-</footer>
-
-
-<script>
-function toggleMenu() {
-document.getElementById('navLinks').classList.toggle('active');
-}
-</script>
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      hamburger.classList.toggle("open");
+    });
+  </script>
 </body>
 </html>

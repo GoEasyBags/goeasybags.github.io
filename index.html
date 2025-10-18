@@ -1,170 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>GoEasy — Luxury Bags</title>
-
-  <!-- Playfair Display from Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Note re: Brittany font:
-       If you have the Brittany font file, upload it to /fonts and uncomment the @font-face rule in style.css.
-       Otherwise the stylesheet uses a script fallback for that "handwritten" vibe. -->
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoEasy Bags</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- TOP PROMO BANNER -->
-  <div class="top-banner">
-    Free Nationwide Shipping on Orders ₦50,000+
-  </div>
-
-  <!-- NAVBAR -->
-  <header class="site-header">
-    <div class="container nav-row">
-      <div class="nav-left">
-        <!-- no logo image by request — brand name left minimal -->
-        <span class="brand-text">GoEasy</span>
-      </div>
-
-      <nav class="nav-center" id="mainNav">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="shop.html" class="nav-link">Shop</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-
-      <div class="nav-right">
-        <a class="help-link" href="https://wa.me/2348077275962" target="_blank" rel="noopener">Need help?</a>
-        <button id="hamburger" class="hamburger" aria-label="menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">GoEasy</div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Collection</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </header>
 
-  <!-- MOBILE NAV (drawer) -->
-  <div id="mobileNav" class="mobile-nav" aria-hidden="true">
-    <a href="index.html">Home</a>
-    <a href="shop.html">Shop</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="https://wa.me/2348077275962" target="_blank">Need help?</a>
-  </div>
-
-  <!-- HERO -->
-  <main>
-    <section class="hero">
-      <!-- Replace hero-banner.jpg with your Canva banner (1920x1080) -->
-      <img src="images/hero-banner.jpg" alt="GoEasy hero banner" class="hero-image">
-    </section>
-
-    <!-- SHOP OUR COLLECTIONS -->
-    <section class="collections container" id="collections">
-      <h2 class="section-title">Shop Our Collections</h2>
-
-      <div class="grid">
-        <!-- Collection card: replace images with real collection images -->
-        <article class="card fade-in">
-          <div class="image-wrap">
-            <img src="images/collection-luxury.jpg" alt="Luxury Bags">
-            <div class="card-overlay">
-              <span class="overlay-text">Explore Luxury Bags →</span>
-            </div>
-          </div>
-          <h3 class="card-title">Luxury Bags</h3>
-        </article>
-
-        <article class="card fade-in">
-          <div class="image-wrap">
-            <img src="images/collection-tote.jpg" alt="Tote Bags">
-            <div class="card-overlay">
-              <span class="overlay-text">Shop Tote Bags →</span>
-            </div>
-          </div>
-          <h3 class="card-title">Tote Bags</h3>
-        </article>
-
-        <article class="card fade-in">
-          <div class="image-wrap">
-            <img src="images/collection-crossbody.jpg" alt="Crossbody Bags">
-            <div class="card-overlay">
-              <span class="overlay-text">See Crossbody →</span>
-            </div>
-          </div>
-          <h3 class="card-title">Crossbody</h3>
-        </article>
-      </div>
-    </section>
-
-    <!-- INSTAGRAM FEED (placeholder grid) -->
-    <section class="insta-section">
-      <div class="container">
-        <h2 class="section-title">From Instagram</h2>
-        <div class="insta-grid">
-          <!-- Replace with real IG images or embed later -->
-          <img src="images/ig1.jpg" alt="IG 1" class="fade-in-small">
-          <img src="images/ig2.jpg" alt="IG 2" class="fade-in-small">
-          <img src="images/ig3.jpg" alt="IG 3" class="fade-in-small">
-          <img src="images/ig4.jpg" alt="IG 4" class="fade-in-small">
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT / FOOTER -->
-    <section class="about-footer container">
-      <div class="about-left fade-in">
-        <!-- Replace with your portrait image -->
-        <img src="images/founder.jpg" alt="Founder" class="founder-img">
-      </div>
-      <div class="about-right fade-in">
-        <h3 class="about-title">GoEasy</h3>
-        <p class="about-text">
-          GoEasy curates high-quality branded and unbranded bags for the modern woman who values
-          elegance and simplicity. We combine timeless design with accessible pricing so luxury is effortless.
-        </p>
-        <p class="about-text small">
-          Nationwide pick-up shipping; doorstep available on request. Questions? <a href="https://wa.me/2348077275962" target="_blank">Chat with us</a>.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <p>© 2025 GoEasy. All rights reserved.</p>
-      <div class="socials">
-        <!-- placeholder social icons (replace with SVGs or images) -->
-        <a href="#" aria-label="instagram">IG</a>
-      </div>
+  <!-- Banner Section -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Luxury Bags for Every Woman</h1>
+      <p>Effortless elegance, timeless style — GoEasy makes luxury easy.</p>
     </div>
-  </footer>
+  </section>
 
-  <!-- Small script: hamburger + fade-in on scroll -->
   <script>
-    // Hamburger toggle
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobileNav');
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
 
-    hamburger.addEventListener('click', () => {
-      const open = hamburger.getAttribute('aria-expanded') === 'true';
-      hamburger.setAttribute('aria-expanded', String(!open));
-      mobileNav.classList.toggle('open');
-      document.body.classList.toggle('no-scroll');
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      hamburger.classList.toggle("open");
     });
-
-    // Fade-in using IntersectionObserver
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.fade-in, .fade-in-small').forEach(el => io.observe(el));
   </script>
 </body>
 </html>
